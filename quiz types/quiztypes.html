@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Questions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #b7c0d1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #3d3d3d;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .container {
+            background: #e4c4c6;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            font-size: 24px;
+            color: #6b296b;
+            margin-bottom: 20px;
+        }
+
+        .quiz-option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+            background-color: #C19292;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .take-button {
+            background-color: #3d3d3d;
+            color: #ffffff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .take-button:hover {
+            background-color: #2c2c2c;
+        }
+    </style>
+</head>
+<body>
+    <a href="/login/login.html">
+        <button class="back-button">Back</button>
+    </a>
+
+    <div class="container">
+        <h3 class="title">Quiz Types</h3>
+
+        <div class="quiz-option">
+                <span>Programming Quiz</span> 
+                <a href="/programming quiz/pquiz.html">
+                    <button class="take-button">Take</button>
+                </a>
+        </div>
+
+        <div class="quiz-option">
+            <span>Science Quiz </span>
+            <a href="/Science Quiz/science.html">
+                <button class="take-button">Take</button>
+            </a>
+        </div>
+
+        <div class="quiz-option">
+            <span> Maths Quiz </span>
+           <a href="/Maths/Maths.html">
+            <button class="take-button">Take</button>
+           </a>
+        </div>
+
+        <div class="quiz-option">
+            General Knowledge Quiz 
+            <a href="/General Knowledge Quiz/GK.html">
+                <button class="take-button">Take</button>
+            </a>
+        </div>
+
+    </div>
+</body>
+</html>

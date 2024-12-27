@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Quiz</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #b7c0d1;
+        }
+
+        .header {
+            background-color: #4c0b0b;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .header img {
+            height: 50px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 70px;
+            margin-left: 70px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 5px 10px;
+        }
+
+        .nav-links a:hover {
+            background-color: #6b2929;
+            border-radius: 5px;
+        }
+
+        .main-content {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .main-title {
+            font-size: 28px;
+            background-color: #FF00AE;
+            color: white;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            width: 700px;
+            margin: 20px auto;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+
+        .question {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .options {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .options:hover {
+            background-color: #f0f8ff;
+            transform: scale(1.02);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .options label {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+            font-size: 16px;
+            color: #444;
+            cursor: pointer;
+        }
+
+        .options input[type="radio"] {
+            margin-right: 10px;
+            accent-color: #1cc143; 
+        }
+
+        .submit-btn {
+            background: linear-gradient(to right, #1cc143, #28a745);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out, transform 0.2s;
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(to right, #28a745, #1cc143);
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .result {
+            font-size: 24px;
+            font-weight: bold;
+            color: #444;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        pre {
+            background-color: #ececec;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: "Courier New", Courier, monospace;
+            color: #d63384; 
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="/Home/logo.png" alt="Logo">
+        <div class="nav-links">
+            <a href="/Home/Home.html">Home</a>
+            <a href="/quiz types/quiztypes.html">Quizzes</a>
+            <a href="#">Result</a>
+        </div>
+    </div>
+
+    
+    <div class="main-content">
+        <div class="main-title">Science Quiz</div>
+        <div class="container">
+            <form id="quiz-form">
+                <div class="question-section">
+                    <!-- Question 1 -->
+                    <div class="question">1. What is the chemical symbol for water?</div>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="a"> H2O</label>
+                        <label><input type="radio" name="q1" value="b"> H2O2</label>
+                        <label><input type="radio" name="q1" value="c"> O2</label>
+                        <label><input type="radio" name="q1" value="d"> CO2</label>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="question">2. What is the powerhouse of the cell?</div>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="a"> Nucleus</label>
+                        <label><input type="radio" name="q2" value="b"> Ribosome</label>
+                        <label><input type="radio" name="q2" value="c"> Mitochondria</label>
+                        <label><input type="radio" name="q2" value="d"> Chloroplast</label>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="question">3. Which planet is known as the Red Planet?</div>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="a"> Earth</label>
+                        <label><input type="radio" name="q3" value="b"> Mars</label>
+                        <label><input type="radio" name="q3" value="c"> Venus</label>
+                        <label><input type="radio" name="q3" value="d"> Jupiter</label>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="question">4. What gas do plants absorb from the atmosphere for photosynthesis?</div>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="a"> Oxygen</label>
+                        <label><input type="radio" name="q4" value="b"> Nitrogen</label>
+                        <label><input type="radio" name="q4" value="c"> Carbon Dioxide</label>
+                        <label><input type="radio" name="q4" value="d"> Hydrogen</label>
+                    </div>
+
+                    <!-- Question 5 -->
+                    <div class="question">5. Who developed the theory of relativity?</div>
+                    <div class="options">
+                        <label><input type="radio" name="q5" value="a"> Isaac Newton</label>
+                        <label><input type="radio" name="q5" value="b"> Albert Einstein</label>
+                        <label><input type="radio" name="q5" value="c"> Nikola Tesla</label>
+                        <label><input type="radio" name="q5" value="d"> Galileo Galilei</label>
+                    </div>
+                </div>
+
+                <button type="button" class="submit-btn" onclick="checkAnswers()">Submit Test</button>
+            </form>
+            <div id="result" class="result"></div>
+        </div>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            const correctAnswers = {
+                q1: "a",
+                q2: "c",
+                q3: "b",
+                q4: "c",
+                q5: "b"
+            };
+
+            let score = 0;
+            const totalQuestions = Object.keys(correctAnswers).length;
+
+            for (let question in correctAnswers) {
+                const selected = document.querySelector(`input[name="${question}"]:checked`);
+                if (selected && selected.value === correctAnswers[question]) {
+                    score++;
+                }
+            }
+
+            document.getElementById("result").innerText = `You scored ${score} out of ${totalQuestions}`;
+        }
+    </script>
+</body>
+</html>

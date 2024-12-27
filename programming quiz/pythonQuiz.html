@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Quiz</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #b7c0d1;
+        }
+
+        .header {
+            background-color: #4c0b0b;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .header img {
+            height: 50px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 70px;
+            margin-left: 70px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 5px 10px;
+        }
+
+        .nav-links a:hover {
+            background-color: #6b2929;
+            border-radius: 5px;
+        }
+
+        .main-content {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .main-title {
+            font-size: 28px;
+            background-color: #FF00AE;
+            color: white;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        /* Question Section Styles */
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            width: 700px;
+            margin: 20px auto;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+
+        .question {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .options {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .options:hover {
+            background-color: #f0f8ff;
+            transform: scale(1.02);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .options label {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+            font-size: 16px;
+            color: #444;
+            cursor: pointer;
+        }
+
+        .options input[type="radio"] {
+            margin-right: 10px;
+            accent-color: #1cc143; /* Green */
+        }
+
+        .submit-btn {
+            background: linear-gradient(to right, #1cc143, #28a745);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out, transform 0.2s;
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(to right, #28a745, #1cc143);
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .result {
+            font-size: 24px;
+            font-weight: bold;
+            color: #444;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        pre {
+            background-color: #ececec;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: "Courier New", Courier, monospace;
+            color: #d63384; /* Magenta-like color */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="header">
+        <img src="/Home/logo.png" alt="Logo">
+        <div class="nav-links">
+            <a href="/Home/Home.html">Home</a>
+            <a href="/quiz types/quiztypes.html">Quizzes</a>
+            <a href="#">Result</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="main-title">Python Quiz</div>
+        <div class="container">
+            <form id="quiz-form">
+                <div class="question-section">
+                    <div class="question">1. What will be the output of the following code snippet?</div>
+                    <pre><code>print(type([1, 2, 3]))</code></pre>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="a"> &lt;class 'list'&gt;</label>
+                        <label><input type="radio" name="q1" value="b"> &lt;class 'tuple'&gt;</label>
+                        <label><input type="radio" name="q1" value="c"> &lt;class 'set'&gt;</label>
+                        <label><input type="radio" name="q1" value="d"> &lt;class 'dict'&gt;</label>
+                    </div>
+                    
+
+                    <!-- Question 2 -->
+                    <div class="question">2. What does the following code return?</div>
+                    <pre><code>print(bool(""))</code></pre>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="a"> True</label>
+                        <label><input type="radio" name="q2" value="b"> False</label>
+                        <label><input type="radio" name="q2" value="c"> None</label>
+                        <label><input type="radio" name="q2" value="d"> Error</label>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="question">3. Which of the following data structures is mutable in Python?</div>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="a"> List</label>
+                        <label><input type="radio" name="q3" value="b"> Tuple</label>
+                        <label><input type="radio" name="q3" value="c"> String</label>
+                        <label><input type="radio" name="q3" value="d"> All of the above</label>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="question">4. What is the output of the following code?</div>
+                    <pre><code>print("Hello" * 3)</code></pre>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="a"> Hello3</label>
+                        <label><input type="radio" name="q4" value="b"> HelloHelloHello</label>
+                        <label><input type="radio" name="q4" value="c"> Error</label>
+                        <label><input type="radio" name="q4" value="d"> None</label>
+                    </div>
+
+                    <!-- Question 5 -->
+                    <div class="question">5. What is the correct syntax to define a function in Python?</div>
+                    <div class="options">
+                        <label><input type="radio" name="q5" value="a"> function myFunction():</label>
+                        <label><input type="radio" name="q5" value="b"> def myFunction():</label>
+                        <label><input type="radio" name="q5" value="c"> create myFunction():</label>
+                        <label><input type="radio" name="q5" value="d"> func myFunction():</label>
+                    </div>
+                </div>
+
+                <button type="button" class="submit-btn" onclick="checkAnswers()">Submit Test</button>
+            </form>
+            <div id="result" class="result"></div>
+        </div>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            const correctAnswers = {
+                q1: "a",
+                q2: "b",
+                q3: "a",
+                q4: "b",
+                q5: "b"
+            };
+
+            let score = 0;
+            const totalQuestions = Object.keys(correctAnswers).length;
+
+            for (let question in correctAnswers) {
+                const selected = document.querySelector(`input[name="${question}"]:checked`);
+                if (selected && selected.value === correctAnswers[question]) {
+                    score++;
+                }
+            }
+
+            document.getElementById("result").innerText = `You scored ${score} out of ${totalQuestions}`;
+        }
+    </script>
+</body>
+</html>
