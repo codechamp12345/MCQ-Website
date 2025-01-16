@@ -39,26 +39,6 @@ header nav ul li:hover {
     color: rgb(22, 179, 179);
 }
 
-header .search-bar {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-header .search-bar input {
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-header .search-bar button {
-    padding: 5px 10px;
-    border: none;
-    background-color: yellow;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
 .hero {
     position: relative;
     text-align: center;

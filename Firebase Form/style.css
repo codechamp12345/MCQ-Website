@@ -8,12 +8,26 @@ body{
     background-color: #c9d6ff;
     background:linear-gradient(to right,#e2e2e2,#c9d6ff);
 }
+
+.main-content{
+    margin-left: 30%;
+    margin-top: 20px;
+    height: 60px;
+    width: 500px;
+    background-color: #BE876A;
+    border-radius: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container{
-    background:#fff;
+    background:#f6f0f0;
     width:450px;
     padding:1.5rem;
     margin:50px auto;
-    border-radius:10px;
+    border-radius:14px;
     box-shadow:0 20px 35px rgba(0,0,1,0.9);
 }
 form{
@@ -146,3 +160,6 @@ button:hover{
     animation:fadeOut 7s forwards;
 
 }
+
+
+    

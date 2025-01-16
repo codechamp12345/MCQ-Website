@@ -2,7 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebas
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
 import { getFirestore, setDoc, doc } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
 
-// Your web app's Firebase configuration
+
 const firebaseConfig = {
     apiKey: "AIzaSyC1JJ46OAK7hFFrDx5hNMJPJ63MDL6TNBw",
     authDomain: "project1-adb85.firebaseapp.com",
@@ -12,12 +12,11 @@ const firebaseConfig = {
     appId: "1:197010598309:web:91796b68662151b9c3604c",
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const db = getFirestore();
 
-// Show message utility
+
 function showMessage(message, divId) {
     const messageDiv = document.getElementById(divId);
     messageDiv.style.display = "block";
@@ -28,7 +27,7 @@ function showMessage(message, divId) {
     }, 5000);
 }
 
-// Sign Up Functionality
+
 const signUp = document.getElementById('submitSignUp');
 signUp.addEventListener('click', async (event) => {
     event.preventDefault();
@@ -62,7 +61,7 @@ signUp.addEventListener('click', async (event) => {
     }
 });
 
-// Sign In Functionality
+
 const signIn = document.getElementById('submitSignIn');
 signIn.addEventListener('click', async (event) => {
     event.preventDefault();
